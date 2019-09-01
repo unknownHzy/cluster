@@ -15,7 +15,7 @@ if (isMaster) {
   cluster.on('exit', (worker, exitCode) => {
     log(`Worker ${worker.process.id} exited with code ${exitCode}`)
     log(`Starting a new worker`)
-    cluster.fork()
+    cluster.fork();
   })
 
 } else {
