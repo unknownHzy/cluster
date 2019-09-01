@@ -6,7 +6,7 @@ const router = new Router()
 const app    = new Koa()
 
 router.get('/', async ctx => ctx.body = `PID ${process.pid} listening here!`)
-      .post('/flip', async ctx => {
+      .get('/flip', async ctx => {
         const res = await runJob()
         ctx.body  = res
       })
